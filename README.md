@@ -26,7 +26,7 @@ This final video demonstrates the disastrous effects of removing the D component
 [D Parameter Removed](https://github.com/ramesh130/CarND-PID-Control-Project/blob/master/videos/PID_zero_d.m4v)
 
 
-- *Describe how the final hyperparameters were chosen.*
+### Describe how the final hyperparameters were chosen.
 
 Hyperparameters were tuned manually at first. This was necessary because the narrow track left little room for error, and when attempting to automate parameter optimization (such as Twiddle) it was very common for the car to leave the track, thus invalidating the optimization. Once I found parameters that were able to get the car around the track reliably, I then implemented Twiddle. I felt it necessary to complete a full lap with each change in parameter because it was the only way to get a decent "score" (total error) for the parameter set. For this reason my parameter changes are allowed to "settle in" for 100 steps and are then evaluated for the next 2000 steps. In all, I allowed Twiddle to continue for over 1 million steps (or roughly 500 trips around the track) to fine tune the parameters to their final values (P: 0.134611, I: 0.000270736, D: 3.05349).
 

@@ -74,7 +74,7 @@ int main()
           //pid_t.UpdateError(pow(cte, 2));   // cte^2
           throttle_value = 0.75 - pid_t.Kp * pid_t.p_error
                         - pid_t.Kd * pid_t.d_error 
-                        - pid_t.Ki * pid_t.i_error
+                        - pid_t.Ki * pid_t.i_error;
 
           // DEBUG
           //std::cout << "CTE: " << cte << " Steering Value: " << steer_value << " Throttle Value: " << //throttle_value << std::endl;
